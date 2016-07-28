@@ -47,10 +47,6 @@ paths:
             type: array
             items:
               $ref: '#/definitions/List'
-        default:
-          description: unexpected error
-          schema:
-            $ref: '#/definitions/Error'
     post:
       description: Creates a new shopinglist.  Duplicates are allowed.
       operationId: createList
@@ -66,10 +62,6 @@ paths:
           description: List response
           schema:
             $ref: '#/definitions/List'
-        default:
-          description: unexpected error
-          schema:
-            $ref: '#/definitions/Error'
   /shopinglists/{id}:
     get:
       description: Returns a shoping list based on a single ID.
@@ -86,10 +78,6 @@ paths:
           description: list response
           schema:
             $ref: '#/definitions/List'
-        default:
-          description: unexpected error
-          schema:
-            $ref: '#/definitions/Error'
     delete:
       description: deletes a single list based on the ID supplied
       operationId: deleteList
@@ -103,10 +91,6 @@ paths:
       responses:
         204:
           description: list deleted
-        default:
-          description: unexpected error
-          schema:
-            $ref: '#/definitions/Error'
 definitions:
   List:
     allOf:
