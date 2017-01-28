@@ -1,8 +1,8 @@
 swagger: "2.0"
 info:
   version: 1.0.0
-  title: shopinglist
-  description: Shping list API
+  title: shoppinglist
+  description: Shopping list API
   termsOfService: http://swagger.io/terms/
   contact:
     name: Swagger API Team
@@ -20,10 +20,10 @@ consumes:
 produces:
   - application/json
 paths:
-  /shopinglists:
+  /shoppinglists:
     get:
       description: |
-        Retuns a list of stored shoping lists.  Each entry has a short description and a last modified date.
+        Retuns a list of stored shopping lists.  Each entry has a short description and a last modified date.
       operationId: findLists
       parameters:
         - name: tags
@@ -48,7 +48,7 @@ paths:
             items:
               $ref: '#/definitions/List'
     post:
-      description: Creates a new shopinglist.  Duplicates are allowed.
+      description: Creates a new shoppinglist.  Duplicates are allowed.
       operationId: createList
       parameters:
         - name: list
@@ -62,9 +62,9 @@ paths:
           description: List response
           schema:
             $ref: '#/definitions/List'
-  /shopinglists/{id}:
+  /shoppinglists/{id}:
     get:
-      description: Returns a shoping list based on a single ID.
+      description: Returns a shopping list based on a single ID.
       operationId: find list by id
       parameters:
         - name: id
